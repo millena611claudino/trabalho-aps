@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interativo - Desenvolvimento Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <h1>Quiz de Desenvolvimento Web</h1>
+        <p>Teste seus conhecimentos em HTML, CSS e JavaScript</p>
+    </header>
+
+    <main class="container">
+        <!-- Tela Inicial -->
+        <section id="tela-inicial" class="card ativo">
+            <h2>Bem-vindo ao Desafio!</h2>
+            <p>Responda às perguntas de múltipla escolha e veja sua pontuação em tempo real.</p>
+            <button id="btn-iniciar" class="btn-primario">Iniciar Quiz</button>
+        </section>
+
+        <!-- Tela do Quiz -->
+        <section id="tela-quiz" class="card oculto">
+            <div class="info-superior">
+                <span id="progresso">Pergunta 1 de 5</span>
+                <span id="placar-atual">Pontos: 0</span>
+            </div>
+
+            <article class="pergunta-container">
+                <h2 id="texto-pergunta">Texto da pergunta aqui...</h2>
+                <div id="opcoes-container" class="opcoes-grid">
+                    <!-- Botões gerados dinamicamente via JavaScript -->
+                </div>
+            </article>
+
+            <div id="feedback" class="feedback oculto"></div>
+
+            <div class="controles">
+                <button id="btn-proxima" class="btn-primario oculto">Próxima Pergunta</button>
+            </div>
+        </section>
+
+        <!-- Tela de Resultado Final -->
+        <section id="tela-resultado" class="card oculto">
+            <h2>Quiz Concluído!</h2>
+            <p id="mensagem-final">Você acertou X de Y perguntas.</p>
+            <div class="resumo-placar">
+                <span id="pontuacao-final">0</span> pontos
+            </div>
+            <button id="btn-reiniciar" class="btn-primario">Reiniciar Quiz</button>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>Projeto desenvolvido para avaliação prática • Hospedado no GitHub Pages</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
